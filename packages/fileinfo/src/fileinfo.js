@@ -45,8 +45,16 @@ class FileInfo {
   }
   /**
    * Gets file type (will return fs.Stats.mode)
+   * 可以参考以下两处获得更多信息
+   *
+   *  https://godoc.org/golang.org/x/sys/unix#pkg-constants
+   * https://github.com/golang/go/blob/master/src/cmd/vendor/golang.org/x/sys/unix/zerrors_darwin_amd64.go
    */
   getType() {
+    /**
+
+     */
+
     // const stats = fs.statSync(this.filePath);
     // console.log("    size: " + stats.size);
     // console.log("    mode: " + stats.mode);

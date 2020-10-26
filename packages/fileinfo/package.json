@@ -2,12 +2,35 @@
   "name": "@shirkhan/fileinfo",
   "version": "0.0.1",
   "author": "babbage <601728820@qq.com>",
+  "description": "The Shirkhan Node Library (SNL) is a collection of interfaces and classes that are meant to solve common problems",
+  "homepage": "https://github.com/SilvaQ/snl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SilvaQ/snl"
+  },
+  "keywords": [
+		"ecmascript",
+		"es",
+		"es6",
+		"extras",
+		"harmony",
+		"javascript",
+		"util",
+		"utils",
+    "utilities",
+    "shirkhan",
+    "snl"
+	],
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "src/fileinfo.js",
   "scripts": {
-    "dev":"nodemon -w src"
+    "dev": "nodemon -w src"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  }
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "gitHead": "470a2b0b0a5379e999cb38c2da11f32c2ab53fd5"
 }
