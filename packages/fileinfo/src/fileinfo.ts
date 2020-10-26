@@ -1,10 +1,12 @@
-const fs = require("fs");
-const path = require("path");
+// const fs = require("fs");
+// const path = require("path");
+import * as fs from 'fs'
+import * as path from 'path'
 
 class FileInfo {
   filePath = "";
 
-  constructor(filePath) {
+  constructor(filePath:string) {
     this.filePath = filePath;
   }
   /**
@@ -72,7 +74,6 @@ class FileInfo {
 
     // console.log("    file:           " + (stats.mode & 0o0100000 ? "f" : "-"));
     // console.log("    directory:      " + (stats.mode & 0o0040000 ? "d" : "-"));
-    fs.constants.S_IFDIR;
     return fs.statSync(this.filePath).mode;
   }
   /**
@@ -117,4 +118,4 @@ class FileInfo {
   }
 }
 
-module.exports = FileInfo;
+export default FileInfo;
