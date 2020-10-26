@@ -1,0 +1,8 @@
+{
+  "name": "@shirkhan/fileinfo",
+  "version": "0.0.1",
+  "author": "babbage <601728820@qq.com>",
+  "license": "MIT",
+  "main": "src/index.js"
+
+}
