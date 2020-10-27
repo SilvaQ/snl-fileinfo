@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import {join} from 'path'
 
 import FileInfo from './fileinfo'
 
@@ -10,7 +11,7 @@ class Finder {
      * look for directories and files
      */
     allFiles(){
-        return fs.readdirSync(this.rootPath).map(file=>new FileInfo(file))
+        return fs.readdirSync(this.rootPath).map(file=>new FileInfo(join(this.rootPath,file)))
     }
     /**
      * look for files only; ignore directories
