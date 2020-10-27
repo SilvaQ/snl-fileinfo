@@ -31,7 +31,9 @@
   "scripts": {
     "cleanup": "rimraf dist types",
     "watch": "nodemon --exec ts-node test/index.ts",
-    "build": "yarn cleanup &&  tsc  "
+    "build": "yarn cleanup &&  tsc  ",
+    "doversion":"yarn lerna version --scopre=@shirkhan/fileinfo",
+    "dopublish":"nrm use npm && npm publish && nrm use taobao"
   },
   "devDependencies": {
     "@types/node": "^14.14.3",
