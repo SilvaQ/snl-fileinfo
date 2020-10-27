@@ -29,21 +29,19 @@
     "types"
   ],
   "scripts": {
-    "prebuild": "rm -rf dist types",
-    "watch": "tsc --watch",
-    "build": "tsc ",
-    "dev": "nodemon -w test"
+    "cleanup": "rimraf dist types",
+    "watch": "nodemon --exec ts-node test/index.ts",
+    "build": "yarn cleanup &&  tsc  "
   },
   "devDependencies": {
     "@types/node": "^14.14.3",
     "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
   "engines": {
     "node": ">=12.0.0"
   },
-  "gitHead": "b30b622f75052f9d169abce9019a4f5fa8b796e6",
-  "dependencies": {
-    "@types/node": "^14.14.3"
-  }
+  "gitHead": "b30b622f75052f9d169abce9019a4f5fa8b796e6"
 }
