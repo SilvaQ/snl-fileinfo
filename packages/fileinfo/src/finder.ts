@@ -1,10 +1,10 @@
 import * as fs from 'fs'
 import {join} from 'path'
 
-import FileInfo from './fileinfo'
+import {FileInfo} from './fileinfo'
 
 
-class Finder {
+export class Finder {
     constructor(public rootPath:string){}
 
     /**
@@ -26,6 +26,4 @@ class Finder {
         return  this.allFiles().filter(fileinfo=>fileinfo.isDir())
     }
 }
-
-export default Finder;
 
