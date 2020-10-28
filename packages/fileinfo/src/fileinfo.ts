@@ -1,8 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs';
+import * as path from 'path';
 
 export class FileInfo {
-  filePath = "";
+  filePath = '';
 
   constructor(filePath: string) {
     this.filePath = filePath;

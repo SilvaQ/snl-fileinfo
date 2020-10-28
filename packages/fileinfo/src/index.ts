@@ -1,2 +1,2 @@
-export * from "./finder";
-export * from "./fileinfo";
+export * from './finder';
+export * from './fileinfo';

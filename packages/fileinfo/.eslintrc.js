@@ -1,24 +1,28 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
+
 module.exports = {
-  root: false,
-  parser: "@typescript-eslint/parser",
+  root: true,
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
-    roject: ["./tsconfig.eslint.json", "./packages/*/tsconfig.json"],
+    project: path.resolve(__dirname, './tsconfig.json'),
+    sourceType: 'module',
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint'],
   extends: [
-    "airbnb-typescript",
-    "prettier",
-    "airbnb-typescript-prettier",
-    "prettier/@typescript-eslint",
+    'airbnb-typescript',
+    'prettier',
+    'airbnb-typescript-prettier',
+    'prettier/@typescript-eslint',
   ],
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
+      files: ['*.ts', '*.tsx'],
       rules: {
-        "import/prefer-default-export": "off",
-        "no-useless-constructor": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
+        'import/prefer-default-export': 'off',
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
       },
     },
   ],

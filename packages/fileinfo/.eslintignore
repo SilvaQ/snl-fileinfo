@@ -9,6 +9,7 @@ build
 
 # Lint dotfiles
 !.*.js
+.eslintrc.js
 
 # Do not use prettier to re-format the changelog
 CHANGELOG.md
