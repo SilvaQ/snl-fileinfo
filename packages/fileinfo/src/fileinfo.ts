@@ -1,48 +1,56 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import * as fs from "fs";
+import * as path from "path";
 
 export class FileInfo {
   filePath = "";
 
-  constructor(filePath:string) {
+  constructor(filePath: string) {
     this.filePath = filePath;
   }
+
   /**
    * Gets the base name of the file
    */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getBasename() {
     return path.basename(this.filePath);
   }
+
   /**
    * Gets the Dir name of the file
    */
   getDirname() {
     return path.dirname(this.filePath);
   }
+
   /**
    * Gets the file extension
    */
   getExtension() {
     return path.extname(this.filePath);
   }
+
   /**
    *  Gets the filename
    */
   getFilename() {
     return this.getBasename();
   }
+
   /**
    *  Gets the path without filename
    */
   getPath() {
     return this.getDirname();
   }
+
   /**
    * Gets file size
    */
   getSize() {
     return fs.statSync(this.filePath).size;
   }
+
   /**
    * Gets file type (will return fs.Stats.mode)
    * 可以参考以下两处获得更多信息
@@ -74,24 +82,28 @@ export class FileInfo {
     // console.log("    directory:      " + (stats.mode & 0o0040000 ? "d" : "-"));
     return fs.statSync(this.filePath).mode;
   }
+
   /**
    *  Tells if the file is a directory
    */
   isDir() {
     return fs.statSync(this.filePath).isDirectory();
   }
+
   /**
    * Tells if the object references a regular file
    */
   isFile() {
     return fs.statSync(this.filePath).isFile();
   }
+
   /**
    * Tells if the file is a link
    */
   isLink() {
     return fs.statSync(this.filePath).isSymbolicLink();
   }
+
   /**
    *  Tells if file is readable
    */
@@ -103,6 +115,7 @@ export class FileInfo {
       return false;
     }
   }
+
   /**
    * Tells if the entry is writable
    */
@@ -115,5 +128,3 @@ export class FileInfo {
     }
   }
 }
-
-

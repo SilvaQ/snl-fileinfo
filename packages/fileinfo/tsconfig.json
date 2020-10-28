@@ -19,6 +19,9 @@
     "declarationDir": "types",
     "declaration": true,
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "test",
     "node_modules",
