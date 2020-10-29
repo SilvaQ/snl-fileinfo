@@ -13,3 +13,5 @@ build
 
 # Do not use prettier to re-format the changelog
 CHANGELOG.md
+
+__tests__
