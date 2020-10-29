@@ -35,7 +35,8 @@
     "doversion": "yarn lerna version --scopre=@shirkhan/fileinfo",
     "dopublish": "nrm use npm && npm publish && nrm use taobao",
     "lint": "eslint src",
-    "test": "jest --config=.jest.config.js"
+    "test": "jest --config=.jest.config.js",
+    "befor-commit":"yarn lint && yarn test"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -62,7 +63,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn befor-commit"
     }
   },
   "gitHead": "b30b622f75052f9d169abce9019a4f5fa8b796e6"
