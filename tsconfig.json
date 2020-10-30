@@ -10,9 +10,7 @@
     "types": [
       "node"
     ],
-    "typeRoots": [
-      "../../node_modules/types"
-    ],
+    "typeRoots": [],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -23,8 +21,6 @@
     "src",
   ],
   "exclude": [
-    "__tests__",
-    "test",
     "node_modules",
     "../../node_modules"
   ]

@@ -1,3 +1,3 @@
-### Shirkhan Node Library (SNL)
+### @shirkhan/fileinfo
 
-The Shirkhan Node Library (SNL) is a collection of interfaces and classes that are meant to solve common problems.
+The FileInfo class offers a high-level object oriented interface to information for an individual file.
